@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Battambang & Moul for Khmer) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Moul&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <script>
@@ -51,17 +51,9 @@
             border-color: rgba(212, 175, 55, 0.5);
         }
         .glass {
-            background: rgba(22, 31, 48, 0.7);
+            background: rgba(22, 31, 48, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        /* Modal Custom Styling */
-        .modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal-active {
-            opacity: 1;
-            visibility: visible;
         }
     </style>
 </head>
@@ -70,7 +62,7 @@
     <!-- Navigation Header -->
     <header class="sticky top-0 z-50 glass border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3 cursor-pointer" onclick="scrollToTop()">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <div class="w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center text-black font-extrabold text-2xl shadow-lg shadow-gold/20">
                     S
                 </div>
@@ -79,171 +71,112 @@
                     <p class="text-xs text-gray-400 font-english tracking-widest uppercase">Monetize Your Skills</p>
                 </div>
             </div>
-
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a href="#skills" class="hover:text-gold transition-colors">ជំនាញរកចំណូល</a>
-                <a href="#calculator" class="hover:text-gold transition-colors">គណនាប្រាក់ចំណូល</a>
-                <a href="#roadmap" class="hover:text-gold transition-colors">ផែនការសកម្មភាព</a>
-                <a href="#faq" class="hover:text-gold transition-colors">សំណួរញឹកញាប់</a>
-            </nav>
-
-            <div>
-                <a href="#skills" class="bg-gold-gradient text-black font-bold px-6 py-2.5 rounded-full hover:brightness-110 transition-all shadow-lg shadow-gold/20 flex items-center gap-2">
-                    <i class="fa-solid fa-rocket"></i> ចាប់ផ្តើមរៀន
-                </a>
-            </div>
+            <a href="#skills" class="bg-gold-gradient text-black font-bold px-5 py-2.5 rounded-full hover:brightness-110 transition-all text-sm shadow-lg shadow-gold/20 flex items-center gap-2">
+                <i class="fa-solid fa-rocket"></i> ចាប់ផ្តើម
+            </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative py-20 overflow-hidden">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <span class="px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold inline-block mb-6">
-                💎 មគ្គុទ្ទេសក៍រកចំណូលឌីជីថល ឆ្នាំ២០២៦
+    <section class="relative py-16 overflow-hidden text-center px-4">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs sm:text-sm font-semibold inline-block mb-6">
+                💎 មគ្គុទ្ទេសក៍រកចំណូលឌីជីថល ឆ្នាំ២០២૬
             </span>
-            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                ផ្លាស់ប្តូរ <span class="text-gold-gradient">ជំនាញឌីជីថល</span> របស់អ្នក <br class="hidden md:block">ឱ្យទៅជាប្រភពចំណូលពិតប្រាកដ
+            <h1 class="text-3xl sm:text-5xl font-black mb-6 leading-tight">
+                ផ្លាស់ប្តូរ <span class="text-gold-gradient">ជំនាញឌីជីថល</span> របស់អ្នក ឱ្យទៅជាប្រភពចំណូល
             </h1>
-            <p class="text-gray-400 text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
-                ប្រមូលផ្តុំទៅដោយជំនាញដែលមានតម្រូវការទីផ្សារខ្ពស់ ការពន្យល់លម្អិតពីរបៀបចាប់ផ្តើម និងការគណនាប្រាក់ចំណូលជាក់ស្តែង ដើម្បីជួយអ្នកកសាងអាជីវកម្មអនឡាញ ឬការងារ Freelance ដោយជោគជ័យ។
+            <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+                ប្រមូលផ្តុំជំនាញដែលមានតម្រូវការទីផ្សារខ្ពស់ ការពន្យល់លម្អិត និងការគណនាប្រាក់ចំណូលជាក់ស្តែង។
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#skills" class="bg-gold-gradient text-black font-bold px-8 py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-xl shadow-gold/20">
-                    ស្វែងរកជំនាញសសមស្រប <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-                <a href="#calculator" class="bg-card border border-gray-700 hover:border-gold text-white font-bold px-8 py-4 rounded-xl text-lg transition-all">
-                    គណនាចំណូលរំពឹងទុក
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- Main Content: Skill Cards -->
-    <section id="skills" class="py-16 bg-black/40 border-t border-b border-gray-800/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">ជំនាញរកចំណូល <span class="text-gold-gradient">កំពូលទាំង ៦</span></h2>
-                <p class="text-gray-400">ជ្រើសរើសជំនាញដែលអ្នកចូលចិត្ត ដើម្បីមើលការណែនាំលម្អិត និងយុទ្ធសាស្ត្ររកចំណូល</p>
+    <section id="skills" class="py-12 bg-black/40 border-t border-b border-gray-800/50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-3">ជំនាញរកចំណូល <span class="text-gold-gradient">កំពូលទាំង ៦</span></h2>
+                <p class="text-gray-400 text-sm">ចុចលើប៊ូតុងខាងក្រោម ካርድនីមួយៗដើម្បីមើលការណែនាំលម្អិត</p>
             </div>
 
-            <!-- Grid Container -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="skills-grid">
-                <!-- Skill Cards will be rendered dynamically by JavaScript -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
+                <!-- Dynamically injected cards -->
             </div>
         </div>
     </section>
 
     <!-- Calculator Section -->
-    <section id="calculator" class="py-20 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass p-8 md:p-12 rounded-3xl border border-gold/20 relative overflow-hidden">
+    <section id="calculator" class="py-16 px-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="glass p-6 sm:p-10 rounded-3xl border border-gold/20">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gold-gradient mb-2">កាត់ប្រមាណប្រាក់ចំណូលប្រចាំខែ</h2>
-                    <p class="text-gray-400">គណនាប្រាក់ចំណូលដែលអ្នកអាចរកបានតាមរយៈការធ្វើ Freelance ឬការងារអនឡាញ</p>
+                    <h2 class="text-2xl font-bold text-gold-gradient mb-2">គណនាប្រាក់ចំណូលរំពឹងទុក</h2>
+                    <p class="text-gray-400 text-sm">ប៉ាន់ស្មានប្រាក់ចំណូលប្រចាំខែរបស់អ្នក</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label class="block text-sm font-medium mb-2 text-gray-300">ជ្រើសរើសជំនាញ</label>
-                        <select id="calc-skill" class="w-full bg-dark border border-gray-700 rounded-xl p-3 text-white focus:border-gold outline-none">
+                        <select id="calc-skill" class="w-full bg-dark border border-gray-700 rounded-xl p-3 text-white focus:border-gold outline-none text-sm">
                             <option value="50">Web Development ($50/ម៉ោង)</option>
                             <option value="30">UI/UX Design ($30/ម៉ោង)</option>
                             <option value="25">Video Editing ($25/ម៉ោង)</option>
                             <option value="20">Digital Marketing ($20/ម៉ោង)</option>
-                            <option value="15">Content Creation & AI ($15/ម៉ោង)</option>
-                            <option value="40">E-Commerce & Dropshipping ($40/ម៉ោង)</option>
+                            <option value="15">AI Content Creation ($15/ម៉ោង)</option>
+                            <option value="40">E-Commerce & Digital ($40/ម៉ោង)</option>
                         </select>
                     </div>
-
                     <div>
-                        <label class="block text-sm font-medium mb-2 text-gray-300">ម៉ោងធ្វើការក្នុងមួយសប្តាហ៍: <span id="hours-val" class="text-gold font-bold">20</span> ម៉ោង</label>
-                        <input type="range" id="calc-hours" min="5" max="60" value="20" class="w-full accent-gold h-2 bg-gray-700 rounded-lg cursor-pointer">
+                        <label class="block text-sm font-medium mb-2 text-gray-300">ម៉ោងធ្វើការ/សប្តាហ៍: <span id="hours-val" class="text-gold font-bold">20</span> ម៉ោង</label>
+                        <input type="range" id="calc-hours" min="5" max="60" value="20" class="w-full accent-gold h-2 bg-gray-700 rounded-lg cursor-pointer mt-3">
                     </div>
                 </div>
 
-                <div class="bg-dark/80 p-6 rounded-2xl border border-gold/30 text-center">
-                    <p class="text-gray-400 text-sm mb-1">ប្រាក់ចំណូលប៉ាន់ស្មានប្រចាំខែ (Est. Monthly Earnings)</p>
-                    <p id="total-earnings" class="text-4xl md:text-5xl font-black text-gold-gradient">$1,600.00</p>
-                    <p class="text-xs text-gray-500 mt-2">*គណនាផ្អែកលើអត្រាមធ្យមភាគទីផ្សារសកល (4 សប្តាហ៍/ខែ)</p>
+                <div class="bg-dark/80 p-5 rounded-2xl border border-gold/30 text-center">
+                    <p class="text-gray-400 text-xs mb-1">ប្រាក់ចំណូលប៉ាន់ស្មានប្រចាំខែ</p>
+                    <p id="total-earnings" class="text-3xl sm:text-4xl font-black text-gold-gradient">$1,600.00</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="py-16 bg-black/40 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">ផែនទីបង្ហាញផ្លូវ <span class="text-gold-gradient">៤ ជំហាន</span> ទៅកាន់ជោគជ័យ</h2>
-                <p class="text-gray-400">អនុវត្តតាមជំហានទាំងនេះដើម្បីចាប់ផ្តើមរកចំណូលដំបូងរបស់អ្នក</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="glass p-6 rounded-2xl border-l-4 border-gold relative">
-                    <div class="text-4xl font-black text-gold/20 mb-2">01</div>
-                    <h3 class="font-bold text-lg mb-2">រៀនមូលដ្ឋានគ្រឹះ</h3>
-                    <p class="text-sm text-gray-400">ចំណាយពេល ១ ទៅ ៣ ខែរៀនជំនាញបច្ចេកទេសឱ្យបានច្បាស់លាស់តាមរយៈ YouTube, Udemy ឬសាលាអនឡាញ។</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-4 border-gold relative">
-                    <div class="text-4xl font-black text-gold/20 mb-2">02</div>
-                    <h3 class="font-bold text-lg mb-2">បង្កើត Portfolio</h3>
-                    <p class="text-sm text-gray-400">ធ្វើគម្រោងសាកល្បង (Sample Projects) យ៉ាងហោចណាស់ ៣-៥ ដើម្បីបង្ហាញសមត្ថភាពដល់អតិថិជន។</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-4 border-gold relative">
-                    <div class="text-4xl font-black text-gold/20 mb-2">03</div>
-                    <h3 class="font-bold text-lg mb-2">ចុះឈ្មោះលើ Platform</h3>
-                    <p class="text-sm text-gray-400">បង្កើត Profile លើ Upwork, Fiverr, LinkedIn ឬតាំងបង្ហាញស្នាដៃលើ TikTok / Facebook Page។</p>
-                </div>
-                <div class="glass p-6 rounded-2xl border-l-4 border-gold relative">
-                    <div class="text-4xl font-black text-gold/20 mb-2">04</div>
-                    <h3 class="font-bold text-lg mb-2">ដាក់ពាក្យ & រកចំណូល</h3>
-                    <p class="text-sm text-gray-400">ផ្ញើ Proposal ទៅកាន់អតិថិជន ផ្តល់សេវាកម្មល្អឥតខ្ចោះ និងទទួលបានការវាយតម្លៃ 5 ផ្កាយ។</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal Detail View -->
-    <div id="modal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 invisible">
-        <div class="glass max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-8 border border-gold/30 relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl w-10 h-10 rounded-full bg-dark flex items-center justify-center">
+    <!-- Modal Popup Detail View (Fixed) -->
+    <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="glass max-w-lg w-full max-h-[85vh] overflow-y-auto rounded-3xl p-6 border border-gold/30 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl w-9 h-9 rounded-full bg-dark flex items-center justify-center border border-gray-700">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="modal-content">
-                <!-- Content injected via JS -->
+                <!-- Modal dynamic info -->
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="mt-auto border-t border-gray-800 py-8 bg-dark">
-        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>© 2026 SkillHub Pro. រក្សាសិទ្ធិគ្រប់យ៉ាង។ កសាងឡើងដើម្បីជួយប្រជាជនខ្មែរអភិវឌ្ឍជំនាញឌីជីថល។</p>
-        </div>
+    <footer class="mt-auto border-t border-gray-800 py-6 bg-dark text-center text-gray-500 text-xs px-4">
+        <p>© 2026 SkillHub Pro. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
     </footer>
 
-    <!-- JavaScript Data and Logic -->
+    <!-- JavaScript -->
     <script>
         const skillsData = [
             {
                 id: 1,
                 title: "Web & Mobile Development",
-                titleKh: "ការអភិវឌ្ឍន៍ വെប និង App",
+                titleKh: "ការអភិវឌ្ឍន៍ វេប និង App",
                 icon: "fa-code",
                 level: "មធ្យម - ខ្ពស់",
                 income: "$500 - $3,500+ / ខែ",
-                shortDesc: "រៀនបង្កើត വെបសាយ និងកម្មវិធីទូរស័ព្ទដៃ ដោយប្រើ HTML, CSS, JavaScript, React ឬ Flutter។",
-                fullDesc: "ជំនាញបង្កើត Web និង Mobile App ជាជំនាញដែលមានតម្រូវការទីផ្សារខ្ពស់បំផុត និងទទួលបានតម្លៃសេវាកម្មថ្លៃ។ អ្នកអាចធ្វើការជា Freelancer លើ Upwork ឬទទួលគម្រោងផ្ទាល់ពីក្រុមហ៊ុនក្នុង និងក្រៅប្រទេស។",
-                tools: ["HTML/CSS", "JavaScript", "React", "Node.js", "Tailwind CSS"],
-                platforms: ["Upwork", "Fiverr", "Toptal", "GitHub"],
+                shortDesc: "រៀនបង្កើត វេបសាយ និងកម្មវិធីទូរស័ព្ទដៃ ដោយប្រើ HTML, CSS, JavaScript, React ឬ Flutter។",
+                fullDesc: "ជំនាញបង្កើត Web និង Mobile App ជាជំនាញមានតម្រូវការទីផ្សារខ្ពស់ និងទទួលបានតម្លៃខ្ពស់លើ Upwork ឬรับทำเว็บ.",
+                tools: ["HTML/CSS", "JavaScript", "React", "Node.js", "Tailwind"],
+                platforms: ["Upwork", "Fiverr", "Toptal"],
                 steps: [
                     "រៀនមូលដ្ឋាន HTML, CSS, JavaScript ឱ្យស្ទាត់",
-                    "រៀន Framework ដូចជា React ឬ Vue.js",
-                    "បង្កើត Web Portfolio ផ្ទាល់ខ្លួនដើម្បីបង្ហាញស្នាដៃ",
-                    "ដាក់ពាក្យធ្វើការ Freelance ឬ Remote Job"
+                    "រៀន Framework ដូចជា React ឬ Flutter",
+                    "បង្កើត Web Portfolio ផ្ទាល់ខ្លួន",
+                    "ដាក់ពាក្យធ្វើការ Freelance"
                 ]
             },
             {
@@ -254,32 +187,30 @@
                 level: "ងាយស្រួល - មធ្យម",
                 income: "$400 - $2,500 / ខែ",
                 shortDesc: "រចនាផ្ទៃកម្មវិធី (App/Web Interface) និងរូបភាពផ្សព្វផ្សាយពាណិជ្ជកម្មប្រកបដោយភាពទាក់ទាញ។",
-                fullDesc: "ការរចនា UI/UX មិនមែនគ្រាន់តែជារូបភាពស្អាតនោះទេ ប៉ុន្តែជាការសិក្សាពីបទពិសោធន៍របស់អ្នកប្រើប្រាស់។ ក្រុមហ៊ុនបច្ចេកវិទ្យាជាច្រើនកំពុងស្វែងរកអ្នកឌីសាញដើម្បីធ្វើឱ្យផលិតផលរបស់ពួកគេងាយស្រួលប្រើប្រាស់។",
-                tools: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva"],
-                platforms: ["Behance", "Dribbble", "Fiverr", "99designs"],
+                fullDesc: "ការរចនា UI/UX គឺសិក្សាពីបទពិសោធន៍អ្នកប្រើប្រាស់ និងភាពស្រស់ស្អាតនៃ Application ដើម្បីឱ្យងាយស្រួលប្រើ។",
+                tools: ["Figma", "Adobe XD", "Photoshop", "Canva"],
+                platforms: ["Behance", "Dribbble", "Fiverr"],
                 steps: [
-                    "សិក្សាពីគោលការណ៍ UI/UX Design",
+                    "សិក្សាគោលការណ៍ UI/UX Design",
                     "ប្រើប្រាស់កម្មវិធី Figma ឱ្យស្ទាត់ជំនាញ",
-                    "Redesign កម្មវិធីល្បីៗដើម្បីធ្វើជាផលប័ត្រ (Portfolio)",
-                    "បង្ហោះស្នាដៃលើ Behance និង Dribbble"
+                    "បង្កើត Portfolio លើ Behance"
                 ]
             },
             {
                 id: 3,
                 title: "Video Editing & Motion Graphics",
-                titleKh: "ការតាត់តំវីដេអូ និង Animation",
+                titleKh: "ការកាត់តវីដេអូ & Animation",
                 icon: "fa-video",
                 level: "មធ្យម",
                 income: "$500 - $3,000 / ខែ",
-                shortDesc: "កាត់តវីដេអូខ្លីៗសម្រាប់ TikTok, Reels, YouTube និងវីដេអូវិពាណិជ្ជកម្ម។",
-                fullDesc: "វីដេអូគឺជាមាតិកាដែលមានប្រជាប្រិយភាពបំផុតនៅលើបណ្តាញសង្គម។ Creators និងក្រុមហ៊ុនជាច្រើនត្រូវការអ្នកកាត់តវីដេអូដែលមានគំនិតច្នៃប្រឌិតខ្ពស់ដើម្បីទាក់ទាញទស្សនិកជន។",
-                tools: ["Premiere Pro", "After Effects", "CapCut Pro", "DaVinci Resolve"],
-                platforms: ["YouTube", "TikTok", "Fiverr", "Upwork"],
+                shortDesc: "កាត់តវីដេអូខ្លីៗសម្រាប់ TikTok, Reels, YouTube និងវីដេអូពាណិជ្ជកម្ម។",
+                fullDesc: "វីដេអូខ្លីៗកំពុងពេញនិយមខ្លាំង Creator និងក្រុមហ៊ុនត្រូវការអ្នកកាត់តជំនាញដើម្បីទាក់ទាញអតិថិជន។",
+                tools: ["Premiere Pro", "After Effects", "CapCut Pro"],
+                platforms: ["YouTube", "TikTok", "Fiverr"],
                 steps: [
-                    "រៀនកាត់តវីដេអូ និងបច្ចេកទេសតន្ត្រី/សំឡេង",
-                    "សិក្សាពីការធ្វើ Motion Graphics និង Sound Effects",
-                    "បង្កើត Showreel រយៈពេល ១-២ នាទីនៃស្នាដៃល្អៗ",
-                    "ទាក់ទង Youtubers ឬ Content Creators ដើម្បីសហការ"
+                    "រៀនកាត់ត និងใส่เอฟเฟกต์សំឡេង",
+                    "បង្កើត Showreel ផ្ទាល់ខ្លួន",
+                    "ទាក់ទង Content Creators"
                 ]
             },
             {
@@ -290,32 +221,30 @@
                 level: "ងាយស្រួល - មធ្យម",
                 income: "$300 - $2,000 / ខែ",
                 shortDesc: "គ្រប់គ្រងការផ្សាយពាណិជ្ជកម្មលើ Facebook, TikTok, Google និងជំរុញការលក់។",
-                fullDesc: "រាល់អាជីវកម្មទាំងអស់ត្រូវការអតិថិជន។ អ្នកជំនាញ Digital Marketing ជួយអាជីវកម្មរៀបចំយុទ្ធសាស្ត្ររត់ Ads គ្រប់គ្រងផេក និងធ្វើឱ្យ ವೆបសាយឡើងចំណាត់ថ្នាក់លើ Google Search (SEO)។",
-                tools: ["Meta Ads Manager", "Google Analytics", "SEMrush", "TikTok Ads"],
-                platforms: ["LinkedIn", "Upwork", "Local Businesses"],
+                fullDesc: "ជួយអាជីវកម្មឱ្យមានអតិថិជនច្រើនតាមរយៈការរត់ Ads និងការធ្វើឱ្យគេហទំព័រឡើងលេខនៅលើ Google Search។",
+                tools: ["Meta Ads", "Google Analytics", "SEMrush"],
+                platforms: ["LinkedIn", "Upwork", "Local Shops"],
                 steps: [
-                    "រៀនយុទ្ធសាស្ត្រ Content Marketing និងការរត់ Ads",
-                    "សិក្សាពីរបៀបវិភាគទិន្នន័យ (Data Analytics)",
-                    "សាកល្បងរត់ Ads ឱ្យអាជីវកម្មតូចៗ ឬមិត្តភក្តិ",
-                    "កសាង Case Study បង្ហាញពីលទ្ធផលនៃការលក់"
+                    "រៀនຍុទ្ធសាស្ត្រ Content និង Ads",
+                    "សាកល្បងរត់ Ads ឱ្យអាជីវកម្មតូចៗ",
+                    "កសាង Case Study លទ្ធផលការលក់"
                 ]
             },
             {
                 id: 5,
-                title: "AI Content Creation & Prompt Engineering",
+                title: "AI Content Creation",
                 titleKh: "ការបង្កើតមាតិកាដោយ AI",
                 icon: "fa-robot",
                 level: "ងាយស្រួល",
                 income: "$300 - $1,800 / ខែ",
                 shortDesc: "ប្រើប្រាស់ AI (ChatGPT, Midjourney) ដើម្បីសរសេរអត្ថបទ រចនារូបភាព និងបង្កើតចំណូល។",
-                fullDesc: "បច្ចេកវិទ្យា AI កំពុងផ្លាស់ប្តូរពិភពលោក។ ការចេះប្រើប្រាស់ Prompt ត្រឹមត្រូវអនុញ្ញាតឱ្យអ្នកបង្កើតអត្ថបទ Copywriting, រូបភាពស្អាតៗ និងមាតិកាបានលឿនជាងមុន ១០ ដង។",
-                tools: ["ChatGPT", "Midjourney", "Claude AI", "Jasper", "Canva Magic"],
-                platforms: ["Medium", "Substack", "KDP", "Fiverr"],
+                fullDesc: "ប្រើប្រាស់បច្ចេកវិទ្យា AI ជំនួយក្នុងការសរសេរ Copywriting និងបង្កើតរូបភាពលឿនជាងមុន ១០ដង។",
+                tools: ["ChatGPT", "Midjourney", "Claude AI", "Canva"],
+                platforms: ["Medium", "Gumroad", "Fiverr"],
                 steps: [
-                    "រៀនសរសេរ Prompt ឱ្យមានប្រសិទ្ធភាព (Prompt Engineering)",
-                    "ប្រើ AI ជួយសរសេរអត្ថបទប្លុក ឬសៀវភៅ E-book",
-                    "បង្កើត Art / Stock Photos លក់តាមអនឡាញ",
-                    "ផ្តល់សេវាបង្កើតមាតិកាឱ្យអាជីវកម្ម"
+                    "រៀនសរសេរ Prompt ប្រកបដោយប្រសិទ្ធភាព",
+                    "ប្រើ AI ช่วยសរសេរអត្ថបទ ឬ E-book",
+                    "ផ្តល់សេវាបង្កើតមាតិកា"
                 ]
             },
             {
@@ -325,96 +254,92 @@
                 icon: "fa-cart-shopping",
                 level: "មធ្យម - ខ្ពស់",
                 income: "$500 - $5,000+ / ខែ",
-                shortDesc: "លក់ផលិតផលឌីជីថល (Template, Course, E-book) ឬធ្វើ Dropshipping សកល។",
-                fullDesc: "ការលក់ផលិតផលឌីជីថលគឺជាប្រភពចំណូល Passive Income ដ៏ល្អបំផុត ព្រោះអ្នកបង្កើតវាស្រាប់តែម្តង ប៉ុន្តែអាចលក់បានរាប់ពាន់ដងដោយមិនបារម្ភរឿងស្តុកអីវ៉ាន់។",
-                tools: ["Shopify", "Etsy", "Gumroad", "WooCommerce", "Canva"],
-                platforms: ["Etsy", "Gumroad", "Shopify", "Amazon"],
+                shortDesc: "លក់ផលិតផលឌីជីថល (Template, E-book) ឬធ្វើ Dropshipping សកល។",
+                fullDesc: "ប្រភពចំណូល Passive Income ដ៏ល្អបំផុតតាមរយៈការលក់ផលិតផលឌីជីថលទូទាំងពិភពលោក។",
+                tools: ["Shopify", "Etsy", "Gumroad"],
+                platforms: ["Etsy", "Gumroad", "Shopify"],
                 steps: [
-                    "ស្រាវជ្រាវរកប្រធានបទដែលមានតម្រូវការទិញ",
-                    "បង្កើត Template (Notion, Canva, Website) ឬ E-Book",
+                    "បង្កើត Template ឬ E-Book",
                     "បើកហាងលើ Gumroad ឬ Etsy",
-                    "ធ្វើការផ្សព្វផ្សាយតាម TikTok/Pinterest"
+                    "ផ្សព្វផ្សាយតាម TikTok/Pinterest"
                 ]
             }
         ];
 
-        // Render Cards
         function renderSkills() {
             const container = document.getElementById('skills-grid');
             container.innerHTML = skillsData.map(skill => `
                 <div class="glass p-6 rounded-3xl border border-gray-800 card-glow transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl mb-4">
                             <i class="fa-solid ${skill.icon}"></i>
                         </div>
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gold border border-gold/20 font-semibold">${skill.level}</span>
-                            <span class="text-xs text-green-400 font-bold"><i class="fa-solid fa-money-bill-wave mr-1"></i>${skill.income}</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full bg-gray-800 text-gold border border-gold/20 font-semibold">${skill.level}</span>
+                            <span class="text-xs text-green-400 font-bold">${skill.income}</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-1 text-white">${skill.titleKh}</h3>
-                        <p class="text-xs text-gold/80 font-english mb-3">${skill.title}</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">${skill.shortDesc}</p>
+                        <h3 class="text-lg font-bold mb-1 text-white">${skill.titleKh}</h3>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">${skill.shortDesc}</p>
                     </div>
-                    <button onclick="openModal(${skill.id})" class="w-full py-3 rounded-xl bg-gray-800 hover:bg-gold hover:text-black font-bold text-sm transition-all border border-gray-700 flex items-center justify-center gap-2">
+                    <button onclick="openModal(${skill.id})" class="w-full py-2.5 rounded-xl bg-gray-800 hover:bg-gold hover:text-black font-bold text-xs transition-all border border-gray-700 flex items-center justify-center gap-2">
                         មើលការណែនាំលម្អិត <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             `).join('');
         }
 
-        // Modal Functions
         function openModal(id) {
             const skill = skillsData.find(s => s.id === id);
             const modalContent = document.getElementById('modal-content');
             
             modalContent.innerHTML = `
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-gold/20 flex items-center justify-center text-gold text-2xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center text-gold text-xl">
                         <i class="fa-solid ${skill.icon}"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-white">${skill.titleKh}</h3>
-                        <p class="text-gold text-sm">${skill.title}</p>
+                        <h3 class="text-xl font-bold text-white">${skill.titleKh}</h3>
+                        <p class="text-gold text-xs">${skill.title}</p>
                     </div>
                 </div>
 
-                <div class="space-y-6 text-gray-300 text-sm">
+                <div class="space-y-4 text-gray-300 text-xs sm:text-sm">
                     <div>
-                        <h4 class="text-gold font-bold text-base mb-2">អំពីជំនាញនេះ៖</h4>
-                        <p class="leading-relaxed text-gray-400">${skill.fullDesc}</p>
+                        <h4 class="text-gold font-bold mb-1">អំពីជំនាញនេះ៖</h4>
+                        <p class="text-gray-400 leading-relaxed">${skill.fullDesc}</p>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-dark/60 p-4 rounded-xl border border-gray-800">
-                            <h4 class="text-gold font-bold mb-2">ឧបករណ៍ត្រូវប្រើ (Tools)</h4>
-                            <div class="flex flex-wrap gap-2">
-                                ${skill.tools.map(t => `<span class="bg-gray-800 text-xs px-2.5 py-1 rounded-md text-gray-300">${t}</span>`).join('')}
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="bg-dark/60 p-3 rounded-xl border border-gray-800">
+                            <h4 class="text-gold font-bold mb-2 text-xs">ឧបករណ៍ (Tools)</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                ${skill.tools.map(t => `<span class="bg-gray-800 text-[10px] px-2 py-0.5 rounded text-gray-300">${t}</span>`).join('')}
                             </div>
                         </div>
-                        <div class="bg-dark/60 p-4 rounded-xl border border-gray-800">
-                            <h4 class="text-gold font-bold mb-2">ប្រភពរកប្រាក់ (Platforms)</h4>
-                            <div class="flex flex-wrap gap-2">
-                                ${skill.platforms.map(p => `<span class="bg-gold/10 text-gold text-xs px-2.5 py-1 rounded-md">${p}</span>`).join('')}
+                        <div class="bg-dark/60 p-3 rounded-xl border border-gray-800">
+                            <h4 class="text-gold font-bold mb-2 text-xs">ប្រភពរកប្រាក់ (Platforms)</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                ${skill.platforms.map(p => `<span class="bg-gold/10 text-gold text-[10px] px-2 py-0.5 rounded">${p}</span>`).join('')}
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <h4 class="text-gold font-bold text-base mb-3">ជំហានក្នុងការចាប់ផ្តើម៖</h4>
-                        <ol class="space-y-2 list-decimal list-inside text-gray-400">
-                            ${skill.steps.map(step => `<li class="leading-relaxed">${step}</li>`).join('')}
+                        <h4 class="text-gold font-bold mb-2">ជំហានក្នុងការចាប់ផ្តើម៖</h4>
+                        <ol class="space-y-1.5 list-decimal list-inside text-gray-400 text-xs">
+                            ${skill.steps.map(step => `<li>${step}</li>`).join('')}
                         </ol>
                     </div>
                 </div>
 
-                <button onclick="closeModal()" class="w-full mt-8 py-3 rounded-xl bg-gold-gradient text-black font-bold">យល់ព្រម</button>
+                <button onclick="closeModal()" class="w-full mt-6 py-2.5 rounded-xl bg-gold-gradient text-black font-bold text-sm">បិទ</button>
             `;
 
-            document.getElementById('modal').classList.add('modal-active');
+            document.getElementById('modal').classList.remove('hidden');
         }
 
         function closeModal() {
-            document.getElementById('modal').classList.remove('modal-active');
+            document.getElementById('modal').classList.add('hidden');
         }
 
         // Calculator Logic
@@ -433,10 +358,6 @@
 
         skillSelect.addEventListener('change', updateEarnings);
         hoursSlider.addEventListener('input', updateEarnings);
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
         // Initialize
         renderSkills();
